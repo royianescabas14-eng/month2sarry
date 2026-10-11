@@ -1,0 +1,552 @@
+/* 🌸 General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #ffafbd, #ffc3a0);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+/* 🌼 Homepage */
+/* 💕 Relationship Journey Title */
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8em;
+  font-weight: 700;
+  color: #ff4d88;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+  text-shadow: 0 0 10px rgba(255, 105, 180, 0.4),
+               0 0 20px rgba(255, 182, 193, 0.3);
+  animation: fadeIn 1.5s ease-in-out, glowPulse 2.5s infinite alternate;
+}
+
+/* ✨ Soft glowing animation */
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.3),
+                 0 0 20px rgba(255, 182, 193, 0.2);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(255, 105, 180, 0.6),
+                 0 0 40px rgba(255, 182, 193, 0.4);
+  }
+}
+
+/* 🌸 Smooth fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 💖 Play Music Button */
+#playButton {
+  background-color: #ff4d88;
+  border: none;
+  color: white;
+  font-size: 1.1em;
+  padding: 12px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 105, 180, 0.4);
+  transition: all 0.3s ease;
+  margin-bottom: 25px;
+  animation: fadeIn 1.8s ease-in-out;
+}
+
+#playButton:hover {
+  background-color: #ff66a3;
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 105, 180, 0.5);
+}
+
+/* 🌷 Month Grid */
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 15px;
+  justify-content: center;
+}
+
+.month-box {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-weight: 600;
+  cursor: not-allowed;
+  transition: 0.3s;
+}
+
+.month-box.active {
+  background: #ff6f91;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.month-box.active:hover {
+  transform: scale(1.05);
+}
+
+/* 💌 Month 1 Buttons */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.love-btn {
+  background: #ff6f91;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.love-btn:hover {
+  background: #ff3f6b;
+  transform: scale(1.05);
+}
+
+#message {
+  font-size: 18px;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 💌 Words Page (Love Letter) */
+.words-page {
+  background: linear-gradient(to bottom, #ffb6c1, #ffc3a0);
+  color: #333;
+  text-align: center;
+  padding: 40px 15px;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header styles */
+.words-page h1 {
+  color: #ff4d6d;
+  font-size: 2.5em;
+  letter-spacing: 2px;
+  text-shadow: 0 0 8px rgba(255, 182, 193, 0.5);
+}
+
+.words-page .subtitle {
+  font-size: 1.1em;
+  color: #5a5a5a;
+  margin-bottom: 30px;
+}
+
+/* Top Image (Main photo) */
+.image-container.top {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.image-container.top img {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.image-container.top img:hover {
+  transform: scale(1.03);
+}
+
+/* Bottom Image (Love letter) */
+.image-container.bottom {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.image-container.bottom img {
+  width: auto;
+  max-width: 90%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, opacity 0.5s ease;
+}
+
+.image-container.bottom img:hover {
+  transform: scale(1.02);
+  opacity: 0.95;
+}
+
+/* Return Button */
+.back {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #ff4d6d;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(255, 77, 109, 0.4);
+}
+
+.back:hover {
+  background-color: #ff758f;
+  transform: translateY(-2px);
+}
+
+/* 🎬 Service Page (Movie) */
+.movie-img {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.movie-img:hover {
+  transform: scale(1.05);
+}
+
+.movie-title {
+  margin-top: 15px;
+  font-size: 1.4em;
+  font-weight: 600;
+  color: #333;
+}
+
+/* 💖 Quality Time Page */
+.quality-time-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #ffafbd, #ffc3a0);
+  color: #333;
+  min-height: 100vh;
+}
+
+.quality-time-page .container {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 30px;
+  border-radius: 20px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.event-photo {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  margin-top: 15px;
+}
+
+.caption {
+  margin: 20px 0;
+  font-size: 1.1em;
+  font-style: italic;
+  color: #555;
+}
+
+.return-btn {
+  background: #ff6fa0;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.return-btn:hover {
+  background: #ff4d88;
+}
+
+/* 🎁 Gift Page */
+.gift-container {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  width: 85%;
+  max-width: 500px;
+}
+
+.gift-img {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.gift-img:hover {
+  transform: scale(1.05);
+}
+
+.gift-description {
+  margin-top: 15px;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #444;
+  font-style: italic;
+}
+
+/* 💞 Physical Touch Page */
+.physical-container {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 25px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  width: 85%;
+  max-width: 600px;
+}
+
+.ticket-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.ticket-img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ticket-img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.ticket-caption {
+  margin-top: 15px;
+  font-size: 1.1em;
+  font-style: italic;
+  color: #555;
+}
+
+/* 📱 Responsive Layout Adjustments */
+@media (max-width: 900px) {
+  h1 {
+    font-size: 2.2em;
+  }
+
+  .month-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+
+  .month-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .month-box {
+    padding: 15px;
+    font-size: 0.9em;
+  }
+
+  .love-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .movie-img,
+  .gift-img,
+  .event-photo,
+  .ticket-img {
+    max-width: 100%;
+  }
+
+  .container,
+  .gift-container,
+  .physical-container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  .image-container.top img,
+  .image-container.bottom img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .month-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .love-btn {
+    font-size: 13px;
+  }
+}
+.letter {
+  color: #8b3f4c;
+  text-shadow: 0 0 6px rgba(255, 182, 193, 0.6);
+}
+.letter p {
+  color: #561335;
+}
+
+
+/* ---- React migration additions ---- */
+#root {
+  width: 100%;
+}
+
+.music-toggle {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 0 22px;
+  border-radius: 40px;
+  border: none;
+  background: #ff4d88;
+  color: white;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 16px;
+  box-shadow: 0 6px 16px rgba(255, 77, 136, 0.5);
+  cursor: pointer;
+  z-index: 10;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.music-toggle:hover {
+  background: #ff66a3;
+  transform: scale(1.05);
+}
+
+.music-toggle.playing {
+  width: 56px;
+  padding: 0;
+  justify-content: center;
+}
+
+.music-icon {
+  font-size: 24px;
+  line-height: 1;
+}
+
+/* gentle pulse before the first tap so people notice it */
+.music-toggle.idle {
+  animation: musicPulse 1.6s infinite;
+}
+
+@keyframes musicPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(255, 77, 136, 0.6); }
+  70%  { box-shadow: 0 0 0 14px rgba(255, 77, 136, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 77, 136, 0); }
+}
+
+.top-image {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.music-controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.music-controls button {
+  font-size: 20px;
+  padding: 12px 18px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.85);
+  transition: transform 0.2s ease;
+}
+
+.music-controls button:hover {
+  transform: scale(1.1);
+}
+
+.letter {
+  margin-top: 20px;
+  line-height: 1.7;
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 20;
+}
+
+.popup img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+}
