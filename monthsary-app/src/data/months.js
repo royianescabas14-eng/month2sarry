@@ -73,20 +73,71 @@ export const months = [
     id: 3,
     title: "Happy Third Monthsary ❤️",
     subtitle: "Three months of us ❤️",
-    background: null,
+    background: "/images/month3bg.gif",
     music: "/music/mo1.mp3",
     sections: [
       letter("/images/letter3.jpg"),
       gift(),
       {
-        slug: "quality-time",
-        label: "Quality Time",
-        type: "quality",
+        slug: "case-003",
+        label: "Case 003: Fractured Memory",
+        type: "mystery",
         content: {
-          title: "Quality Time 💖",
-          intro: "My favorite moment with you this month",
-          photo: "/images/quality1.jpg",
-          caption: "Write a short sentence about this memory here.",
+          title: "Case 003: Fractured Memory",
+        },
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Happy Fourth Monthsary ❤️",
+    subtitle: "A little machine filled with little pieces of my love.",
+    background: "/images/month4bg.jpeg",
+    music: "/music/gift.mp3",
+    sections: [
+      {
+        slug: "vending",
+        label: "Vending Machine",
+        type: "vending",
+        music: "/music/gift.mp3",
+        content: {
+          title: "The Love Vending Machine",
+        },
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "Happy Fifth Monthsary ❤️",
+    subtitle: "Relationship Systems Bureau v5.0",
+    background: null,
+    music: "/music/gift.mp3",
+    sections: [
+      {
+        slug: "exam",
+        label: "Girlfriend Certification Exam.exe 💻",
+        type: "exam",
+        music: "/music/gift.mp3",
+        content: {
+          title: "GIRLFRIEND CERTIFICATION EXAM.exe",
+        },
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "Happy Sixth Monthsary ❤️",
+    subtitle: "The Museum of Us — Our Albion Online Adventures",
+    background: null,
+    music: "/music/mo1.mp3",
+    sections: [
+      {
+        slug: "museum",
+        label: "The Museum of Us 🏰",
+        type: "museum",
+        music: "/music/mo1.mp3",
+        content: {
+          title: "The Museum of Us",
         },
       },
     ],
