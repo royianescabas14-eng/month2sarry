@@ -5,14 +5,20 @@ import MusicSection from "../components/sections/MusicSection";
 import GiftSection from "../components/sections/GiftSection";
 import WordsSection from "../components/sections/WordsSection";
 import TicketsSection from "../components/sections/TicketsSection";
-import QualityTimeSection from "../components/sections/QualityTimeSection";
+import MysterySection from "../mystery/MysterySection";
+import VendingSection from "../vending/VendingSection";
+import ExamSection from "../exam/ExamSection";
+import MuseumSection from "../museum/MuseumSection";
 
 const renderers = {
   music: MusicSection,
   gift: GiftSection,
   words: WordsSection,
   tickets: TicketsSection,
-  quality: QualityTimeSection,
+  mystery: MysterySection,
+  vending: VendingSection,
+  exam: ExamSection,
+  museum: MuseumSection,
 };
 
 export default function Section() {
@@ -23,6 +29,11 @@ export default function Section() {
 
   const Renderer = renderers[section.type];
   const backTo = `/month/${month.id}`;
+
+  // Museum takes full control of its own layout (background, nav, etc.)
+  if (section.type === "museum") {
+    return <MuseumSection backTo={backTo} />;
+  }
 
   return (
     <MonthLayout month={month} overlay={section.overlay}>
